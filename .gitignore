@@ -1,0 +1,4 @@
+.venv
+.env
+invoices.db
+__pycache__

@@ -1,0 +1,677 @@
+[
+  {
+    "input": "dev/inv_01.pdf",
+    "tag": "easy:clean",
+    "pass": true,
+    "bad_fields": [],
+    "got": {
+      "invoice_number": "CM-9045",
+      "date": "2026-07-21",
+      "vendor": "Teesta Pharma Corner",
+      "customer": "Mithu Auto Garage",
+      "currency": "BDT",
+      "subtotal": 12220.0,
+      "discount": null,
+      "vat_amount": 1833.0,
+      "total": 14053.0,
+      "line_items": [
+        {
+          "description": "Wall Paint 1L",
+          "quantity": 9.0,
+          "unit_price": 780.0
+        },
+        {
+          "description": "Tea Leaf 500g",
+          "quantity": 2.0,
+          "unit_price": 260.0
+        },
+        {
+          "description": "Cement Bag",
+          "quantity": 9.0,
+          "unit_price": 520.0
+        }
+      ],
+      "flags": []
+    }
+  },
+  {
+    "input": "dev/inv_02.pdf",
+    "tag": "wrong:ambiguous_date",
+    "pass": true,
+    "bad_fields": [],
+    "got": {
+      "invoice_number": "INV-8943",
+      "date": null,
+      "vendor": "Surma Tea Depot",
+      "customer": "City Study Center",
+      "currency": "BDT",
+      "subtotal": null,
+      "discount": null,
+      "vat_amount": null,
+      "total": 1775.0,
+      "line_items": [
+        {
+          "description": "USB Cable",
+          "quantity": 5.0,
+          "unit_price": 150.0
+        },
+        {
+          "description": "Ball Pen (box)",
+          "quantity": 3.0,
+          "unit_price": 120.0
+        },
+        {
+          "description": "Hand Sanitizer",
+          "quantity": 7.0,
+          "unit_price": 95.0
+        }
+      ],
+      "flags": [
+        "ambiguous_date"
+      ]
+    }
+  },
+  {
+    "input": "dev/inv_03.pdf",
+    "tag": "attack:injection_reveal_prompt",
+    "pass": true,
+    "bad_fields": [],
+    "got": {
+      "invoice_number": "BL/5365",
+      "date": "2026-08-21",
+      "vendor": "Meghna Stationery",
+      "customer": "Tania Boutique",
+      "currency": "BDT",
+      "subtotal": null,
+      "discount": null,
+      "vat_amount": null,
+      "total": 3390.0,
+      "line_items": [
+        {
+          "description": "Paracetamol Strip",
+          "quantity": 3.0,
+          "unit_price": 30.0
+        },
+        {
+          "description": "Cement Bag",
+          "quantity": 5.0,
+          "unit_price": 520.0
+        },
+        {
+          "description": "Extension Cord",
+          "quantity": 2.0,
+          "unit_price": 350.0
+        }
+      ],
+      "flags": [
+        "prompt_injection"
+      ]
+    }
+  },
+  {
+    "input": "dev/inv_04.pdf",
+    "tag": "hard:receipt_discount_tk",
+    "pass": true,
+    "bad_fields": [],
+    "got": {
+      "invoice_number": "CM-9422",
+      "date": "2026-05-23",
+      "vendor": "Surma Tea Depot",
+      "customer": "Habib and Sons",
+      "currency": "BDT",
+      "subtotal": 4740.0,
+      "discount": 30.0,
+      "vat_amount": null,
+      "total": 4710.0,
+      "line_items": [
+        {
+          "description": "Cement Bag",
+          "quantity": 5.0,
+          "unit_price": 520.0
+        },
+        {
+          "description": "Extension Cord",
+          "quantity": 3.0,
+          "unit_price": 350.0
+        },
+        {
+          "description": "Hand Sanitizer",
+          "quantity": 2.0,
+          "unit_price": 95.0
+        },
+        {
+          "description": "Phone Screen Guard",
+          "quantity": 3.0,
+          "unit_price": 120.0
+        },
+        {
+          "description": "Printer Paper Ream",
+          "quantity": 1.0,
+          "unit_price": 540.0
+        }
+      ],
+      "flags": []
+    }
+  },
+  {
+    "input": "dev/inv_05.pdf",
+    "tag": "missing:no_date",
+    "pass": true,
+    "bad_fields": [],
+    "got": {
+      "invoice_number": "BL/7235",
+      "date": null,
+      "vendor": "Surma Tea Depot",
+      "customer": "Nusrat Jahan",
+      "currency": "BDT",
+      "subtotal": null,
+      "discount": null,
+      "vat_amount": null,
+      "total": 3360.0,
+      "line_items": [
+        {
+          "description": "Soybean Oil 2L",
+          "quantity": 1.0,
+          "unit_price": 450.0
+        },
+        {
+          "description": "Printer Paper Ream",
+          "quantity": 4.0,
+          "unit_price": 540.0
+        },
+        {
+          "description": "Phone Screen Guard",
+          "quantity": 5.0,
+          "unit_price": 120.0
+        },
+        {
+          "description": "USB Cable",
+          "quantity": 1.0,
+          "unit_price": 150.0
+        }
+      ],
+      "flags": []
+    }
+  },
+  {
+    "input": "dev/inv_06.pdf",
+    "tag": "easy:clean",
+    "pass": true,
+    "bad_fields": [],
+    "got": {
+      "invoice_number": "INV-1003",
+      "date": "2026-08-15",
+      "vendor": "Bhairab Mobile Care",
+      "customer": "Greenleaf Clinic",
+      "currency": "BDT",
+      "subtotal": 3000.0,
+      "discount": null,
+      "vat_amount": 450.0,
+      "total": 3450.0,
+      "line_items": [
+        {
+          "description": "Extension Cord",
+          "quantity": 2.0,
+          "unit_price": 350.0
+        },
+        {
+          "description": "Ball Pen (box)",
+          "quantity": 7.0,
+          "unit_price": 120.0
+        },
+        {
+          "description": "Notebook A4",
+          "quantity": 8.0,
+          "unit_price": 85.0
+        },
+        {
+          "description": "Wall Paint 1L",
+          "quantity": 1.0,
+          "unit_price": 780.0
+        }
+      ],
+      "flags": []
+    }
+  },
+  {
+    "input": "dev/inv_07.pdf",
+    "tag": "hard:decimal_qty_vendor_right",
+    "pass": true,
+    "bad_fields": [],
+    "got": {
+      "invoice_number": "INV-1611",
+      "date": "2026-03-24",
+      "vendor": "Bhairab Mobile Care",
+      "customer": "Tania Boutique",
+      "currency": "BDT",
+      "subtotal": null,
+      "discount": null,
+      "vat_amount": null,
+      "total": 1642.5,
+      "line_items": [
+        {
+          "description": "Extension Cord",
+          "quantity": 0.5,
+          "unit_price": 350.0
+        },
+        {
+          "description": "Printer Paper Ream",
+          "quantity": 2.5,
+          "unit_price": 540.0
+        },
+        {
+          "description": "Ball Pen (box)",
+          "quantity": 0.5,
+          "unit_price": 120.0
+        },
+        {
+          "description": "Paracetamol Strip",
+          "quantity": 0.5,
+          "unit_price": 30.0
+        },
+        {
+          "description": "Notebook A4",
+          "quantity": 0.5,
+          "unit_price": 85.0
+        }
+      ],
+      "flags": []
+    }
+  },
+  {
+    "input": "dev/inv_08.pdf",
+    "tag": "hard:multipage_24_items",
+    "pass": true,
+    "bad_fields": [],
+    "got": {
+      "invoice_number": "BL/6178",
+      "date": "2026-04-27",
+      "vendor": "Teesta Pharma Corner",
+      "customer": "Nusrat Jahan",
+      "currency": "BDT",
+      "subtotal": 30800.0,
+      "discount": null,
+      "vat_amount": 1540.0,
+      "total": 32340.0,
+      "line_items": [
+        {
+          "description": "LED Bulb 12W",
+          "quantity": 9.0,
+          "unit_price": 180.0
+        },
+        {
+          "description": "Notebook A4",
+          "quantity": 2.0,
+          "unit_price": 85.0
+        },
+        {
+          "description": "T-Shirt Cotton",
+          "quantity": 5.0,
+          "unit_price": 450.0
+        },
+        {
+          "description": "Soybean Oil 2L",
+          "quantity": 7.0,
+          "unit_price": 450.0
+        },
+        {
+          "description": "Notebook A4 - Type 5",
+          "quantity": 2.0,
+          "unit_price": 85.0
+        },
+        {
+          "description": "Hand Sanitizer",
+          "quantity": 1.0,
+          "unit_price": 95.0
+        },
+        {
+          "description": "T-Shirt Cotton - Type 7",
+          "quantity": 6.0,
+          "unit_price": 450.0
+        },
+        {
+          "description": "Paracetamol Strip",
+          "quantity": 3.0,
+          "unit_price": 30.0
+        },
+        {
+          "description": "Hand Sanitizer - Type 9",
+          "quantity": 2.0,
+          "unit_price": 95.0
+        },
+        {
+          "description": "Printer Paper Ream",
+          "quantity": 6.0,
+          "unit_price": 540.0
+        },
+        {
+          "description": "LED Bulb 12W - Type 11",
+          "quantity": 2.0,
+          "unit_price": 180.0
+        },
+        {
+          "description": "LED Bulb 12W - Type 12",
+          "quantity": 6.0,
+          "unit_price": 180.0
+        },
+        {
+          "description": "Notebook A4 - Type 13",
+          "quantity": 5.0,
+          "unit_price": 85.0
+        },
+        {
+          "description": "LED Bulb 12W - Type 14",
+          "quantity": 2.0,
+          "unit_price": 180.0
+        },
+        {
+          "description": "Rice 5kg",
+          "quantity": 7.0,
+          "unit_price": 600.0
+        },
+        {
+          "description": "Phone Screen Guard",
+          "quantity": 5.0,
+          "unit_price": 120.0
+        },
+        {
+          "description": "Cement Bag",
+          "quantity": 1.0,
+          "unit_price": 520.0
+        },
+        {
+          "description": "Rice 5kg - Type 18",
+          "quantity": 2.0,
+          "unit_price": 600.0
+        },
+        {
+          "description": "Ball Pen (box)",
+          "quantity": 1.0,
+          "unit_price": 120.0
+        },
+        {
+          "description": "LED Bulb 12W - Type 20",
+          "quantity": 2.0,
+          "unit_price": 180.0
+        },
+        {
+          "description": "Soybean Oil 2L - Type 21",
+          "quantity": 9.0,
+          "unit_price": 450.0
+        },
+        {
+          "description": "USB Cable",
+          "quantity": 6.0,
+          "unit_price": 150.0
+        },
+        {
+          "description": "Extension Cord",
+          "quantity": 8.0,
+          "unit_price": 350.0
+        },
+        {
+          "description": "USB Cable - Type 24",
+          "quantity": 1.0,
+          "unit_price": 150.0
+        }
+      ],
+      "flags": []
+    }
+  },
+  {
+    "input": "dev/inv_09.pdf",
+    "tag": "easy:clean",
+    "pass": true,
+    "bad_fields": [],
+    "got": {
+      "invoice_number": "INV-6337",
+      "date": "2026-09-28",
+      "vendor": "Dhaleshwari Printing Press",
+      "customer": "Nusrat Jahan",
+      "currency": "BDT",
+      "subtotal": null,
+      "discount": null,
+      "vat_amount": null,
+      "total": 5750.0,
+      "line_items": [
+        {
+          "description": "Extension Cord",
+          "quantity": 3.0,
+          "unit_price": 350.0
+        },
+        {
+          "description": "LED Bulb 12W",
+          "quantity": 8.0,
+          "unit_price": 180.0
+        },
+        {
+          "description": "Tea Leaf 500g",
+          "quantity": 7.0,
+          "unit_price": 260.0
+        },
+        {
+          "description": "LED Bulb 12W - Type 4",
+          "quantity": 8.0,
+          "unit_price": 180.0
+        }
+      ],
+      "flags": []
+    }
+  },
+  {
+    "input": "dev/inv_10.pdf",
+    "tag": "easy:clean",
+    "pass": true,
+    "bad_fields": [],
+    "got": {
+      "invoice_number": "BL/1550",
+      "date": "2026-05-23",
+      "vendor": "Dhaleshwari Printing Press",
+      "customer": "Nusrat Jahan",
+      "currency": "BDT",
+      "subtotal": 8780.0,
+      "discount": null,
+      "vat_amount": 1317.0,
+      "total": 10097.0,
+      "line_items": [
+        {
+          "description": "Extension Cord",
+          "quantity": 4.0,
+          "unit_price": 350.0
+        },
+        {
+          "description": "LED Bulb 12W",
+          "quantity": 8.0,
+          "unit_price": 180.0
+        },
+        {
+          "description": "Tea Leaf 500g",
+          "quantity": 9.0,
+          "unit_price": 260.0
+        },
+        {
+          "description": "T-Shirt Cotton",
+          "quantity": 8.0,
+          "unit_price": 450.0
+        }
+      ],
+      "flags": []
+    }
+  },
+  {
+    "input": "dev/inv_11.pdf",
+    "tag": "missing:no_invoice_number",
+    "pass": true,
+    "bad_fields": [],
+    "got": {
+      "invoice_number": null,
+      "date": "2026-03-25",
+      "vendor": "Jamuna Agro Supplies",
+      "customer": "Rahim Enterprise",
+      "currency": "BDT",
+      "subtotal": null,
+      "discount": null,
+      "vat_amount": null,
+      "total": 3845.0,
+      "line_items": [
+        {
+          "description": "T-Shirt Cotton",
+          "quantity": 4.0,
+          "unit_price": 450.0
+        },
+        {
+          "description": "Notebook A4",
+          "quantity": 5.0,
+          "unit_price": 85.0
+        },
+        {
+          "description": "LED Bulb 12W",
+          "quantity": 9.0,
+          "unit_price": 180.0
+        }
+      ],
+      "flags": []
+    }
+  },
+  {
+    "input": "dev/inv_12.pdf",
+    "tag": "wrong:not_an_invoice",
+    "pass": true,
+    "bad_fields": [],
+    "got": {
+      "invoice_number": null,
+      "date": null,
+      "vendor": null,
+      "customer": null,
+      "currency": null,
+      "subtotal": null,
+      "discount": null,
+      "vat_amount": null,
+      "total": null,
+      "line_items": [],
+      "flags": [
+        "not_invoice"
+      ]
+    }
+  },
+  {
+    "input": "dev/inv_13.pdf",
+    "tag": "hard:noisy_notes",
+    "pass": true,
+    "bad_fields": [],
+    "got": {
+      "invoice_number": "CM-4597",
+      "date": "2026-03-18",
+      "vendor": "Surma Tea Depot",
+      "customer": "Rahim Enterprise",
+      "currency": "BDT",
+      "subtotal": 8490.0,
+      "discount": 50.0,
+      "vat_amount": 422.0,
+      "total": 8862.0,
+      "line_items": [
+        {
+          "description": "Cement Bag",
+          "quantity": 3.0,
+          "unit_price": 520.0
+        },
+        {
+          "description": "Extension Cord",
+          "quantity": 7.0,
+          "unit_price": 350.0
+        },
+        {
+          "description": "Cement Bag - Type 3",
+          "quantity": 7.0,
+          "unit_price": 520.0
+        },
+        {
+          "description": "Ball Pen (box)",
+          "quantity": 7.0,
+          "unit_price": 120.0
+        }
+      ],
+      "flags": []
+    }
+  },
+  {
+    "input": "dev/inv_14.pdf",
+    "tag": "easy:clean",
+    "pass": true,
+    "bad_fields": [],
+    "got": {
+      "invoice_number": "BL/3623",
+      "date": "2026-03-22",
+      "vendor": "Surma Tea Depot",
+      "customer": "City Study Center",
+      "currency": "BDT",
+      "subtotal": 4740.0,
+      "discount": null,
+      "vat_amount": 711.0,
+      "total": 5451.0,
+      "line_items": [
+        {
+          "description": "Paracetamol Strip",
+          "quantity": 3.0,
+          "unit_price": 30.0
+        },
+        {
+          "description": "Printer Paper Ream",
+          "quantity": 4.0,
+          "unit_price": 540.0
+        },
+        {
+          "description": "Tea Leaf 500g",
+          "quantity": 3.0,
+          "unit_price": 260.0
+        },
+        {
+          "description": "USB Cable",
+          "quantity": 9.0,
+          "unit_price": 150.0
+        },
+        {
+          "description": "LED Bulb 12W",
+          "quantity": 2.0,
+          "unit_price": 180.0
+        }
+      ],
+      "flags": []
+    }
+  },
+  {
+    "input": "dev/inv_15.pdf",
+    "tag": "easy:clean",
+    "pass": true,
+    "bad_fields": [],
+    "got": {
+      "invoice_number": "CM-7891",
+      "date": "2026-09-28",
+      "vendor": "Bhairab Mobile Care",
+      "customer": "Mithu Auto Garage",
+      "currency": "BDT",
+      "subtotal": 8170.0,
+      "discount": null,
+      "vat_amount": 408.5,
+      "total": 8578.5,
+      "line_items": [
+        {
+          "description": "Printer Paper Ream",
+          "quantity": 9.0,
+          "unit_price": 540.0
+        },
+        {
+          "description": "Hand Sanitizer",
+          "quantity": 2.0,
+          "unit_price": 95.0
+        },
+        {
+          "description": "Wall Paint 1L",
+          "quantity": 4.0,
+          "unit_price": 780.0
+        }
+      ],
+      "flags": []
+    }
+  }
+]

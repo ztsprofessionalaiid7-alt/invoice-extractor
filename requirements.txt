@@ -1,0 +1,7 @@
+pdfplumber
+google-genai
+python-dotenv
+pydantic
+streamlit
+pandas
+pytest
